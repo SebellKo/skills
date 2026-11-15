@@ -8,5 +8,6 @@
 | [design-code](skills/design-code/SKILL.md) | 독립적인 서브에이전트 설계를 메인이 비교·통합해 하나의 코드 설계안으로 정리합니다. |
 | [implement-code](skills/implement-code/SKILL.md) | 서브에이전트에게 구현을 위임하고 메인이 실제 변경과 실행 결과를 검토합니다. |
 | [qa-feature](skills/qa-feature/SKILL.md) | 독립 QA 에이전트가 변경 전 기준과 변경 후 기능·회귀를 검증하고 웹 화면은 ego lite로 확인합니다. |
+| [review-code](skills/review-code/SKILL.md) | Interrogate, 구조·유지보수, Devil’s critic의 독립 리뷰를 메인이 검증하고 통합합니다. |
 
 각 스킬은 `skills/<스킬 이름>/`에서 관리합니다.
