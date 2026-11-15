@@ -1,0 +1,3 @@
+interface:
+  display_name: "요구사항 정리"
+  short_description: "디자인과 백엔드 근거를 조사하고 질문으로 요구사항과 완료 조건을 정리합니다"
