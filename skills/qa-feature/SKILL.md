@@ -20,7 +20,7 @@ description: 독립 QA 서브에이전트가 변경 전 사용자 흐름을 확�
 
 ## 2. QA 에이전트에 위임한다
 
-기본은 QA 에이전트 한 명이다. `model: "gpt-6.1-sol"`, `reasoning_effort: "high"`, `fork_turns: "none"`으로 스폰한다. 이 모델이나 위임 기능을 사용할 수 없다면 제약을 알리고 대안을 확인하며, 조용히 다른 모델로 대체하지 않는다.
+기본은 QA 에이전트 한 명이다. `model: "gpt-6.1-sol"`, `reasoning_effort: "medium"`, `fork_turns: "none"`으로 스폰한다. 이 모델이나 위임 기능을 사용할 수 없다면 제약을 알리고 대안을 확인하며, 조용히 다른 모델로 대체하지 않는다.
 
 [QA 실행 지침](references/qa-brief.md)을 읽고 다음 정보와 함께 전달한다.
 
