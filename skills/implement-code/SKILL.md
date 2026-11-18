@@ -23,7 +23,7 @@ ISO 24495-1:2023의 쉬운 언어 원칙에 따라 구현 결과, 검증 근거�
 Codex의 `collaboration.spawn_agent`에 다음 값을 명시한다.
 
 - `agent_type: "worker"`
-- `model: "gpt-6.1-sol"`
+- `model: "gpt-6.2-sol"`
 - `reasoning_effort: "high"`
 - `fork_turns: "none"`
 
