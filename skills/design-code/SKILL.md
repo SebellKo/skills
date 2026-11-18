@@ -24,7 +24,7 @@ ISO 24495-1:2023의 쉬운 언어 원칙에 따라 선택한 구조와 이유를
 Codex의 `collaboration.spawn_agent`에 다음 값을 명시한다.
 
 - `agent_type: "default"`
-- `model: "gpt-6.1-sol"`
+- `model: "gpt-6.2-sol"`
 - `reasoning_effort: "high"`
 - `fork_turns: "none"`
 

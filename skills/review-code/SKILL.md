@@ -27,7 +27,7 @@ description: 세 독립 서브에이전트가 실행 결함, 인터페이스·�
 | 구조·유지보수 리뷰어 | 인터페이스, 책임·상태 소유권, 딥모듈과 유지보수 비용의 문제 | [structure](references/structure.md) |
 | Devil’s critic | 변경의 필요성과 전제에 대한 근거 있는 이의 | [critic](references/critic.md) |
 
-모든 호출에 `agent_type: "default"`, `model: "gpt-6.1-sol"`, `reasoning_effort: "high"`, `fork_turns: "none"`을 명시한다. 가능한 역할은 병렬로 실행하고, 슬롯이 부족하면 나머지를 순차 실행한다. 모델이나 위임 기능을 사용할 수 없으면 제약을 알리고 대안을 확인한다. 다른 모델이나 메인의 리뷰로 조용히 대체하지 않는다.
+모든 호출에 `agent_type: "default"`, `model: "gpt-6.2-sol"`, `reasoning_effort: "high"`, `fork_turns: "none"`을 명시한다. 가능한 역할은 병렬로 실행하고, 슬롯이 부족하면 나머지를 순차 실행한다. 모델이나 위임 기능을 사용할 수 없으면 제약을 알리고 대안을 확인한다. 다른 모델이나 메인의 리뷰로 조용히 대체하지 않는다.
 
 각 리뷰어에게 역할 지침과 다음 맥락을 전달한다.
 
