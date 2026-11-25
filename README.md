@@ -43,4 +43,6 @@
 
 작업 스킬을 설치할 때 참조하는 원칙 스킬도 같은 스킬 루트에 함께 설치하세요. 이 저장소의 `skills/` 아래 24개 폴더를 함께 설치하면 모든 참조가 연결됩니다. 각 작업 스킬은 단독으로 호출할 수 있습니다. 원칙과 TypeScript 스킬은 pstack의 명시적 호출 설정을 Codex의 `allow_implicit_invocation: false`로 옮겼으며, 작업 스킬이 필요한 파일을 읽거나 사용자가 이름으로 직접 호출할 수 있습니다.
 
-원칙과 TypeScript 스킬의 출처는 [pstack 원본](https://github.com/cursor/plugins/tree/41e400932eca14f289e7db717a70455256b6d388/pstack)입니다. 영문 본문을 유지하고 Codex 호출 설정과 참조 링크만 조정했습니다. 각 배포 폴더의 `THIRD_PARTY_NOTICES.txt`에 원본 커밋과 MIT 라이선스 고지를 포함합니다.
+원칙과 TypeScript 스킬의 출처는 [pstack 원본](https://github.com/cursor/plugins/tree/41e400932eca14f289e7db717a70455256b6d388/pstack)입니다. 영문 본문을 유지하고 Codex 호출 설정과 참조 링크만 조정했습니다. 17개 원칙 스킬의 원본 커밋과 MIT 고지는 상위 [LICENSE](skills/LICENSE)에서 함께 관리합니다. TypeScript와 나머지 스킬은 각 폴더의 `THIRD_PARTY_NOTICES.txt`를 유지합니다.
+
+원칙 스킬을 설치할 때는 `skills/LICENSE`도 로컬 스킬 루트에 함께 복사하세요. 원칙 스킬 하나를 별도로 복사·배포할 때도 이 파일을 해당 배포본에 포함해야 합니다. 폴더만 가져오는 개별 스킬 설치 도구는 상위 `LICENSE`를 자동으로 복사하지 않습니다.
