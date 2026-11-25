@@ -8,11 +8,11 @@ QA 에이전트를 스폰할 때 이 지침과 작업별 맥락을 함께 전달
 
 | 적용 상황 | 읽을 원칙 |
 | --- | --- |
-| 실제 동작을 확인하고 통과·실패를 판정할 때 | [prove-it-works](../../principle-prove-it-works/SKILL.md) |
-| 시나리오의 기대 결과나 자동화 검사를 정할 때 | [test-behavior-not-implementation](../../principle-test-behavior-not-implementation/SKILL.md) |
-| 사용 흐름·피드백·오류 경험을 확인할 때 | [experience-first](../../principle-experience-first/SKILL.md) |
-| 같은 전제의 수정·재시도가 같은 검사에서 두 번 이상 실패할 때 | [attack-the-premise](../../principle-attack-the-premise/SKILL.md) |
-| 긴 조사·실행 로그를 다룰 때 | [guard-the-context-window](../../principle-guard-the-context-window/SKILL.md) |
+| 실제 동작을 확인하고 통과·실패를 판정할 때 | [prove-it-works](../../principles/principle-prove-it-works/SKILL.md) |
+| 시나리오의 기대 결과나 자동화 검사를 정할 때 | [test-behavior-not-implementation](../../principles/principle-test-behavior-not-implementation/SKILL.md) |
+| 사용 흐름·피드백·오류 경험을 확인할 때 | [experience-first](../../principles/principle-experience-first/SKILL.md) |
+| 같은 전제의 수정·재시도가 같은 검사에서 두 번 이상 실패할 때 | [attack-the-premise](../../principles/principle-attack-the-premise/SKILL.md) |
+| 긴 조사·실행 로그를 다룰 때 | [guard-the-context-window](../../principles/principle-guard-the-context-window/SKILL.md) |
 | TypeScript 코드를 읽거나 검증 스크립트를 작성할 때 | [typescript-best-practices](../../typescript-best-practices/SKILL.md) |
 
 ## 실행 준비

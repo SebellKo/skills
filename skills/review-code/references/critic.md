@@ -8,10 +8,10 @@
 
 | 적용 상황 | 읽을 원칙 |
 | --- | --- |
-| 변경의 크기·추가 계층·중복의 필요성을 판단할 때 | [laziness-protocol](../../principle-laziness-protocol/SKILL.md), [subtract-before-you-add](../../principle-subtract-before-you-add/SKILL.md) |
-| 우회 처리나 버그 수정의 전제를 검토할 때 | [fix-root-causes](../../principle-fix-root-causes/SKILL.md) |
-| 같은 전제의 수정이 같은 검사에서 두 번 이상 실패한 이력이 있을 때 | [attack-the-premise](../../principle-attack-the-premise/SKILL.md) |
-| 동작 결함을 주장할 때 | [prove-it-works](../../principle-prove-it-works/SKILL.md) |
+| 변경의 크기·추가 계층·중복의 필요성을 판단할 때 | [laziness-protocol](../../principles/principle-laziness-protocol/SKILL.md), [subtract-before-you-add](../../principles/principle-subtract-before-you-add/SKILL.md) |
+| 우회 처리나 버그 수정의 전제를 검토할 때 | [fix-root-causes](../../principles/principle-fix-root-causes/SKILL.md) |
+| 같은 전제의 수정이 같은 검사에서 두 번 이상 실패한 이력이 있을 때 | [attack-the-premise](../../principles/principle-attack-the-premise/SKILL.md) |
+| 동작 결함을 주장할 때 | [prove-it-works](../../principles/principle-prove-it-works/SKILL.md) |
 | TypeScript 코드를 읽을 때 | [typescript-best-practices](../../typescript-best-practices/SKILL.md) |
 
 원칙의 삭제·수정 지침은 검토와 제안에만 적용한다. 합의한 기능을 축소하거나 제품 코드를 수정하지 않는다.

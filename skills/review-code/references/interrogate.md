@@ -8,9 +8,9 @@
 
 | 적용 상황 | 읽을 원칙 |
 | --- | --- |
-| 실행 결과로 결함 여부를 판정할 때 | [prove-it-works](../../principle-prove-it-works/SKILL.md) |
-| 기존 테스트를 평가하거나 재현 검사를 작성할 때 | [test-behavior-not-implementation](../../principle-test-behavior-not-implementation/SKILL.md) |
-| 증상의 발생 지점을 추적할 때 | [fix-root-causes](../../principle-fix-root-causes/SKILL.md) |
+| 실행 결과로 결함 여부를 판정할 때 | [prove-it-works](../../principles/principle-prove-it-works/SKILL.md) |
+| 기존 테스트를 평가하거나 재현 검사를 작성할 때 | [test-behavior-not-implementation](../../principles/principle-test-behavior-not-implementation/SKILL.md) |
+| 증상의 발생 지점을 추적할 때 | [fix-root-causes](../../principles/principle-fix-root-causes/SKILL.md) |
 | TypeScript 코드를 읽을 때 | [typescript-best-practices](../../typescript-best-practices/SKILL.md) |
 
 원칙의 수정 지침은 원인 분석과 수정 방향 제안에만 적용한다. 리뷰 중 제품 코드는 수정하지 않는다.

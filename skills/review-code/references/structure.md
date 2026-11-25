@@ -10,11 +10,11 @@
 
 | 적용 상황 | 읽을 원칙 |
 | --- | --- |
-| 인터페이스·계층·상태 추적 비용을 검토할 때 | [minimize-reader-load](../../principle-minimize-reader-load/SKILL.md) |
-| 상태·분기·분산된 규칙을 검토할 때 | [model-the-domain](../../principle-model-the-domain/SKILL.md) |
-| 외부 입력·검증·프레임워크 의존을 검토할 때 | [boundary-discipline](../../principle-boundary-discipline/SKILL.md) |
-| 정적 타입·함수 시그니처를 검토할 때 | [type-system-discipline](../../principle-type-system-discipline/SKILL.md); TypeScript면 [typescript-best-practices](../../typescript-best-practices/SKILL.md) |
-| 테스트 유지 비용과 검증 범위를 검토할 때 | [test-behavior-not-implementation](../../principle-test-behavior-not-implementation/SKILL.md) |
+| 인터페이스·계층·상태 추적 비용을 검토할 때 | [minimize-reader-load](../../principles/principle-minimize-reader-load/SKILL.md) |
+| 상태·분기·분산된 규칙을 검토할 때 | [model-the-domain](../../principles/principle-model-the-domain/SKILL.md) |
+| 외부 입력·검증·프레임워크 의존을 검토할 때 | [boundary-discipline](../../principles/principle-boundary-discipline/SKILL.md) |
+| 정적 타입·함수 시그니처를 검토할 때 | [type-system-discipline](../../principles/principle-type-system-discipline/SKILL.md); TypeScript면 [typescript-best-practices](../../typescript-best-practices/SKILL.md) |
+| 테스트 유지 비용과 검증 범위를 검토할 때 | [test-behavior-not-implementation](../../principles/principle-test-behavior-not-implementation/SKILL.md) |
 
 ## 검토와 반환
 

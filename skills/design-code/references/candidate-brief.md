@@ -8,16 +8,16 @@
 
 | 적용 상황 | 읽을 원칙 |
 | --- | --- |
-| 핵심 데이터·접근 패턴·동시 상태를 정할 때 | [foundational-thinking](../../principle-foundational-thinking/SKILL.md) |
-| 새 요구사항을 기존 설계에 통합할 때 | [redesign-from-first-principles](../../principle-redesign-from-first-principles/SKILL.md) |
-| 구조 변경의 크기와 제거할 복잡성을 판단할 때 | [laziness-protocol](../../principle-laziness-protocol/SKILL.md), [subtract-before-you-add](../../principle-subtract-before-you-add/SKILL.md) |
-| 인터페이스·계층·상태 소유권을 정할 때 | [minimize-reader-load](../../principle-minimize-reader-load/SKILL.md); 상태·분기가 얽히면 [model-the-domain](../../principle-model-the-domain/SKILL.md) |
-| 외부 입력·프레임워크 경계를 정할 때 | [boundary-discipline](../../principle-boundary-discipline/SKILL.md) |
-| 정적 타입·시그니처를 설계할 때 | [type-system-discipline](../../principle-type-system-discipline/SKILL.md); TypeScript면 [typescript-best-practices](../../typescript-best-practices/SKILL.md) |
-| 사용자·호출자 경험과 범위를 절충할 때 | [experience-first](../../principle-experience-first/SKILL.md) |
-| 선례 없는 구조·상호작용을 선택할 때 | [exhaust-the-design-space](../../principle-exhaust-the-design-space/SKILL.md) |
-| 동작 검증 방법을 설계하거나 실험 결과로 선택할 때 | [test-behavior-not-implementation](../../principle-test-behavior-not-implementation/SKILL.md), [prove-it-works](../../principle-prove-it-works/SKILL.md) |
-| 후보 분산 조사나 긴 자료를 다룰 때 | [guard-the-context-window](../../principle-guard-the-context-window/SKILL.md) |
+| 핵심 데이터·접근 패턴·동시 상태를 정할 때 | [foundational-thinking](../../principles/principle-foundational-thinking/SKILL.md) |
+| 새 요구사항을 기존 설계에 통합할 때 | [redesign-from-first-principles](../../principles/principle-redesign-from-first-principles/SKILL.md) |
+| 구조 변경의 크기와 제거할 복잡성을 판단할 때 | [laziness-protocol](../../principles/principle-laziness-protocol/SKILL.md), [subtract-before-you-add](../../principles/principle-subtract-before-you-add/SKILL.md) |
+| 인터페이스·계층·상태 소유권을 정할 때 | [minimize-reader-load](../../principles/principle-minimize-reader-load/SKILL.md); 상태·분기가 얽히면 [model-the-domain](../../principles/principle-model-the-domain/SKILL.md) |
+| 외부 입력·프레임워크 경계를 정할 때 | [boundary-discipline](../../principles/principle-boundary-discipline/SKILL.md) |
+| 정적 타입·시그니처를 설계할 때 | [type-system-discipline](../../principles/principle-type-system-discipline/SKILL.md); TypeScript면 [typescript-best-practices](../../typescript-best-practices/SKILL.md) |
+| 사용자·호출자 경험과 범위를 절충할 때 | [experience-first](../../principles/principle-experience-first/SKILL.md) |
+| 선례 없는 구조·상호작용을 선택할 때 | [exhaust-the-design-space](../../principles/principle-exhaust-the-design-space/SKILL.md) |
+| 동작 검증 방법을 설계하거나 실험 결과로 선택할 때 | [test-behavior-not-implementation](../../principles/principle-test-behavior-not-implementation/SKILL.md), [prove-it-works](../../principles/principle-prove-it-works/SKILL.md) |
+| 후보 분산 조사나 긴 자료를 다룰 때 | [guard-the-context-window](../../principles/principle-guard-the-context-window/SKILL.md) |
 
 ## 호출 예제에서 구조를 도출한다
 

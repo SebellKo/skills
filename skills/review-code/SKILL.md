@@ -39,7 +39,7 @@ description: 세 독립 서브에이전트가 실행 결함, 인터페이스·�
 - 제품 코드와 다른 작업자의 변경을 보존하고, 추가 에이전트를 스폰하지 않을 책임.
 - 첫 결과를 제출하기 전에는 다른 리뷰어의 결론을 보지 않을 조건.
 
-분산 조사나 긴 diff·실행 로그를 다룰 때 메인과 해당 리뷰어는 [guard-the-context-window](../principle-guard-the-context-window/SKILL.md)를 읽는다.
+분산 조사나 긴 diff·실행 로그를 다룰 때 메인과 해당 리뷰어는 [guard-the-context-window](../principles/principle-guard-the-context-window/SKILL.md)를 읽는다.
 
 역할과 원칙은 살펴볼 질문이며 문제를 찾아낼 의무가 아니다. 담당 관점에서 검토한 뒤 지적이 없으면 확인한 범위와 판단 근거만 짧게 반환한다. 지적이 없다는 이유로 추가 탐색을 시키거나, 원칙별 코멘트와 역할별 개수를 채우지 않는다. 다른 관점의 유효한 문제는 담당 관점의 지적 유무와 관계없이 전달할 수 있으며 근거의 종류를 구분한다.
 

@@ -26,11 +26,11 @@ description: 사용자가 명시적으로 호출하면 개발 요청을 기능 �
 
 | 적용 상황 | 읽을 원칙 |
 | --- | --- |
-| 여러 단계와 의존 작업을 진행할 때 | [sequence-verifiable-units](../principle-sequence-verifiable-units/SKILL.md) |
-| 작업자를 나누거나 긴 자료·로그를 이어받을 때 | [guard-the-context-window](../principle-guard-the-context-window/SKILL.md) |
-| 단계 경계를 정한 재작성·이전을 진행할 때 | [outcome-oriented-execution](../principle-outcome-oriented-execution/SKILL.md) |
-| 같은 전제의 수정이 같은 검사에서 두 번 이상 실패할 때 | [attack-the-premise](../principle-attack-the-premise/SKILL.md) |
-| 최종 결과를 완료로 판단할 때 | [prove-it-works](../principle-prove-it-works/SKILL.md) |
+| 여러 단계와 의존 작업을 진행할 때 | [sequence-verifiable-units](../principles/principle-sequence-verifiable-units/SKILL.md) |
+| 작업자를 나누거나 긴 자료·로그를 이어받을 때 | [guard-the-context-window](../principles/principle-guard-the-context-window/SKILL.md) |
+| 단계 경계를 정한 재작성·이전을 진행할 때 | [outcome-oriented-execution](../principles/principle-outcome-oriented-execution/SKILL.md) |
+| 같은 전제의 수정이 같은 검사에서 두 번 이상 실패할 때 | [attack-the-premise](../principles/principle-attack-the-premise/SKILL.md) |
+| 최종 결과를 완료로 판단할 때 | [prove-it-works](../principles/principle-prove-it-works/SKILL.md) |
 
 현재 단계에서 사용할 스킬을 읽고 적용한다. 아래 스킬은 별도로 설치되어 있어야 한다. 상대 링크에서 찾지 못하면 설치된 스킬 목록에서 같은 이름을 찾고, 필요한 스킬이 없으면 누락을 알린다. 세부 지침을 추측해서 대체하지 않는다.
 

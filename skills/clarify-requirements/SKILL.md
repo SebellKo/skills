@@ -15,9 +15,9 @@ ISO 24495-1:2023의 쉬운 언어 원칙에 따라 사용자 용어와 중요한
 
 | 적용 상황 | 읽을 원칙 |
 | --- | --- |
-| 사용자 흐름·기능·옵션의 범위를 결정할 때 | [experience-first](../principle-experience-first/SKILL.md) |
-| 기존 요구사항에 추가·중복된 기능이나 설정을 정리할 때 | [subtract-before-you-add](../principle-subtract-before-you-add/SKILL.md) |
-| 긴 자료를 조사하거나 조사를 분담할 때 | [guard-the-context-window](../principle-guard-the-context-window/SKILL.md) |
+| 사용자 흐름·기능·옵션의 범위를 결정할 때 | [experience-first](../principles/principle-experience-first/SKILL.md) |
+| 기존 요구사항에 추가·중복된 기능이나 설정을 정리할 때 | [subtract-before-you-add](../principles/principle-subtract-before-you-add/SKILL.md) |
+| 긴 자료를 조사하거나 조사를 분담할 때 | [guard-the-context-window](../principles/principle-guard-the-context-window/SKILL.md) |
 
 자료 조사를 서브에이전트에게 위임한다면 필요한 사용자 결정, 작업 범위와 선택한 원칙의 실제 파일 경로를 전달하고 직접 읽게 한다. 이름이나 요약만으로 대신하지 않으며, 실제 읽은 원칙과 판단에 영향을 준 내용을 짧게 반환하게 한다. 원칙을 이유로 합의한 제품 결정을 다시 열거나 범위를 임의로 축소하지 않는다.
 

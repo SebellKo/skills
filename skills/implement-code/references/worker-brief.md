@@ -8,19 +8,19 @@
 
 | 적용 상황 | 읽을 원칙 |
 | --- | --- |
-| 변경 범위·새 계층·중복을 판단할 때 | [laziness-protocol](../../principle-laziness-protocol/SKILL.md); 추가·재구성 전에 [subtract-before-you-add](../../principle-subtract-before-you-add/SKILL.md) |
-| 핵심 데이터·접근 패턴·공유 상태를 정할 때 | [foundational-thinking](../../principle-foundational-thinking/SKILL.md); 상태·분기가 얽히면 [model-the-domain](../../principle-model-the-domain/SKILL.md) |
-| 인터페이스·상태의 추적 비용을 바꿀 때 | [minimize-reader-load](../../principle-minimize-reader-load/SKILL.md) |
-| 외부 입력·검증·어댑터를 구현할 때 | [boundary-discipline](../../principle-boundary-discipline/SKILL.md) |
-| 정적 타입 언어로 구현할 때 | [type-system-discipline](../../principle-type-system-discipline/SKILL.md); TypeScript면 [typescript-best-practices](../../typescript-best-practices/SKILL.md) |
-| 여러 단계의 변경을 진행할 때 | [sequence-verifiable-units](../../principle-sequence-verifiable-units/SKILL.md) |
-| 단계 경계를 정한 재작성·이전을 수행할 때 | [outcome-oriented-execution](../../principle-outcome-oriented-execution/SKILL.md) |
-| 버그를 조사·수정할 때 | [fix-root-causes](../../principle-fix-root-causes/SKILL.md) |
-| 같은 전제의 수정이 같은 검사에서 두 번 이상 실패할 때 | [attack-the-premise](../../principle-attack-the-premise/SKILL.md) |
-| 테스트를 작성·변경·유지할 때 | [test-behavior-not-implementation](../../principle-test-behavior-not-implementation/SKILL.md) |
-| 완료 조건과 실행 결과를 검증할 때 | [prove-it-works](../../principle-prove-it-works/SKILL.md) |
-| 사용자 경험에 관한 구현 선택이 남아 있을 때 | [experience-first](../../principle-experience-first/SKILL.md) |
-| 분산 조사나 긴 자료·실행 로그를 다룰 때 | [guard-the-context-window](../../principle-guard-the-context-window/SKILL.md) |
+| 변경 범위·새 계층·중복을 판단할 때 | [laziness-protocol](../../principles/principle-laziness-protocol/SKILL.md); 추가·재구성 전에 [subtract-before-you-add](../../principles/principle-subtract-before-you-add/SKILL.md) |
+| 핵심 데이터·접근 패턴·공유 상태를 정할 때 | [foundational-thinking](../../principles/principle-foundational-thinking/SKILL.md); 상태·분기가 얽히면 [model-the-domain](../../principles/principle-model-the-domain/SKILL.md) |
+| 인터페이스·상태의 추적 비용을 바꿀 때 | [minimize-reader-load](../../principles/principle-minimize-reader-load/SKILL.md) |
+| 외부 입력·검증·어댑터를 구현할 때 | [boundary-discipline](../../principles/principle-boundary-discipline/SKILL.md) |
+| 정적 타입 언어로 구현할 때 | [type-system-discipline](../../principles/principle-type-system-discipline/SKILL.md); TypeScript면 [typescript-best-practices](../../typescript-best-practices/SKILL.md) |
+| 여러 단계의 변경을 진행할 때 | [sequence-verifiable-units](../../principles/principle-sequence-verifiable-units/SKILL.md) |
+| 단계 경계를 정한 재작성·이전을 수행할 때 | [outcome-oriented-execution](../../principles/principle-outcome-oriented-execution/SKILL.md) |
+| 버그를 조사·수정할 때 | [fix-root-causes](../../principles/principle-fix-root-causes/SKILL.md) |
+| 같은 전제의 수정이 같은 검사에서 두 번 이상 실패할 때 | [attack-the-premise](../../principles/principle-attack-the-premise/SKILL.md) |
+| 테스트를 작성·변경·유지할 때 | [test-behavior-not-implementation](../../principles/principle-test-behavior-not-implementation/SKILL.md) |
+| 완료 조건과 실행 결과를 검증할 때 | [prove-it-works](../../principles/principle-prove-it-works/SKILL.md) |
+| 사용자 경험에 관한 구현 선택이 남아 있을 때 | [experience-first](../../principles/principle-experience-first/SKILL.md) |
+| 분산 조사나 긴 자료·실행 로그를 다룰 때 | [guard-the-context-window](../../principles/principle-guard-the-context-window/SKILL.md) |
 
 ## 구현
 
