@@ -2,19 +2,37 @@
 
 메인이 배정한 범위의 코드를 구현하고 검증한다. 담당 파일과 책임, 합의한 계약을 확인하고 관련 호출부와 기존 구현을 읽는다. 같은 코드베이스에 다른 작업자가 있으므로 기존 변경을 되돌리거나 맡지 않은 파일을 임의로 덮어쓰지 않는다. 추가 에이전트 생성은 메인이 담당한다.
 
+## 필요한 원칙을 읽는다
+
+메인과 구현 담당자는 아래 조건에 맞는 원칙의 `SKILL.md`를 직접 읽고 구현·검토에 적용한다. 이미 현재 맥락에서 읽은 파일은 다시 읽지 않는다. 링크가 없으면 설치 목록에서 같은 이름을 찾고, 그래도 없으면 누락을 알린다. 원칙을 이유로 합의한 범위를 확대하거나 제품 결정을 바꾸지 않는다.
+
+| 적용 상황 | 읽을 원칙 |
+| --- | --- |
+| 변경 범위·새 계층·중복을 판단할 때 | [laziness-protocol](../../principle-laziness-protocol/SKILL.md); 추가·재구성 전에 [subtract-before-you-add](../../principle-subtract-before-you-add/SKILL.md) |
+| 핵심 데이터·접근 패턴·공유 상태를 정할 때 | [foundational-thinking](../../principle-foundational-thinking/SKILL.md); 상태·분기가 얽히면 [model-the-domain](../../principle-model-the-domain/SKILL.md) |
+| 인터페이스·상태의 추적 비용을 바꿀 때 | [minimize-reader-load](../../principle-minimize-reader-load/SKILL.md) |
+| 외부 입력·검증·어댑터를 구현할 때 | [boundary-discipline](../../principle-boundary-discipline/SKILL.md) |
+| 정적 타입 언어로 구현할 때 | [type-system-discipline](../../principle-type-system-discipline/SKILL.md); TypeScript면 [typescript-best-practices](../../typescript-best-practices/SKILL.md) |
+| 여러 단계의 변경을 진행할 때 | [sequence-verifiable-units](../../principle-sequence-verifiable-units/SKILL.md) |
+| 단계 경계를 정한 재작성·이전을 수행할 때 | [outcome-oriented-execution](../../principle-outcome-oriented-execution/SKILL.md) |
+| 버그를 조사·수정할 때 | [fix-root-causes](../../principle-fix-root-causes/SKILL.md) |
+| 같은 전제의 수정이 같은 검사에서 두 번 이상 실패할 때 | [attack-the-premise](../../principle-attack-the-premise/SKILL.md) |
+| 테스트를 작성·변경·유지할 때 | [test-behavior-not-implementation](../../principle-test-behavior-not-implementation/SKILL.md) |
+| 완료 조건과 실행 결과를 검증할 때 | [prove-it-works](../../principle-prove-it-works/SKILL.md) |
+| 사용자 경험에 관한 구현 선택이 남아 있을 때 | [experience-first](../../principle-experience-first/SKILL.md) |
+| 분산 조사나 긴 자료·실행 로그를 다룰 때 | [guard-the-context-window](../../principle-guard-the-context-window/SKILL.md) |
+
 ## 구현
 
-- 프로젝트의 기존 패턴과 설치된 도구를 사용해 요구사항과 유지할 계약을 완전히 충족하는 최소 변경을 만든다. 줄 수를 줄이기 위해 우회 처리를 남기지 않는다. 관련 중복·불필요한 코드는 호출부와 유지할 동작을 확인해 먼저 덜어내고, 무관한 정리는 포함하지 않는다.
-- 로직을 늘리기 전에 데이터 형태·허용 상태·소유자를 확인한다. 반복되는 규칙은 한 곳에서 표현하고, 명확한 로직에 새 추상화를 강제하지 않는다. 외부 입력은 경계에서 검증해 내부 모델로 바꾸며, 타입 선언을 런타임 검증으로 간주하지 않는다. 검증된 내부 계약을 중복 검사하거나 원본 스키마와 별도 타입을 수동으로 맞추지 않는다.
-- 여러 단계의 변경은 각 단위의 완료 조건과 검사를 정해 확인한 뒤 의존 작업을 진행한다. 바뀐 계약의 호출부, export, 설정, 테스트와 fixture를 함께 반영하고 합의한 이전 범위에 임시 코드나 구 경로가 남았는지 확인한다.
+- 프로젝트의 기존 패턴과 설치된 도구로 합의한 동작과 계약을 구현한다. 관련 호출부, export, 설정, 테스트와 fixture도 반영한다. 무관한 정리는 포함하지 않는다.
 - 맡은 범위 밖의 수정이 필요하면 파일과 이유를 메인에게 알린다. 다른 담당자의 파일을 동시에 수정하지 않는다.
 - 입력 검증, 오류 처리, 권한과 접근성처럼 기존 동작을 보호하는 처리를 유지한다. 임시 우회로 설계의 모순을 숨기지 않는다.
-- 버그는 실패 조건과 기대 결과를 먼저 확인한다. 문제가 된 상태가 정당하면 필요한 곳에서 처리하고, 발생하면 안 되는 상태라면 처음 잘못 만든 지점을 수정한다. 같은 원인의 관련 경로도 확인한다. 재현할 수 없으면 근거와 미확인 범위를 메인에 알린다.
-- 새로운 의미 있는 동작에는 공개 인터페이스의 관찰 가능한 결과를 확인하는 작은 검증을 남긴다. 기대값은 요구사항에서 도출하고, 동작을 깨뜨리면 실패하지만 결과를 유지한 내부 변경에는 통과하도록 한다. 수정 후 원래 실패 조건을 다시 실행하며, 충분한 기존 검증이 있는 단순 변경에 중복 테스트를 추가하지 않는다.
+- 버그를 재현할 수 없으면 근거와 미확인 범위를 메인에 알린다. 수정 후 원래 실패 조건을 다시 실행한다.
+- 새로운 의미 있는 동작에는 작은 검증을 남긴다. 충분한 기존 검증이 있는 단순 변경에 중복 테스트를 추가하지 않는다.
 - 검증을 위해 무관한 테스트 환경을 크게 만들거나, 잘못된 구현에 맞춰 테스트를 약하게 바꾸지 않는다. 테스트 경로가 부적합하면 가장 가까운 유효한 실행 검증을 사용하고 한계를 적는다.
-- 기능·성능·UI 등 변경한 동작에 맞는 검사를 수행한다. 컴파일 성공을 사용자 동작의 검증으로 대신하지 않는다.
+- 기능·성능·UI 등 변경한 동작에 맞는 검사를 수행한다.
 
-같은 전제의 수정이 같은 검증에서 반복해서 실패하면 다음 수정 전에 전제를 적고 이를 판별할 관찰을 수행한다. 결정할 수 없는 제품 계약이나 환경 제약은 근거와 함께 메인에 반환한다.
+결정할 수 없는 제품 계약이나 환경 제약은 근거와 함께 메인에 반환한다.
 
 ## 반환할 내용
 

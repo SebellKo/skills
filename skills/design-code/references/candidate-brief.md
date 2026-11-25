@@ -2,18 +2,28 @@
 
 공통 설명의 문제 전체를 독립적으로 설계한다. 제공된 코드와 근거를 직접 확인하고, 기존 계약과 관례를 조사한다. 여러 에이전트가 같은 파일 시스템을 사용하므로 공유 코드나 다른 후보의 파일을 수정하지 않는다. 추가 에이전트는 생성하지 않는다.
 
+## 필요한 원칙을 읽는다
+
+메인과 각 후보는 아래 조건에 맞는 원칙의 `SKILL.md`를 직접 읽고 설계·비교에 적용한다. 이미 현재 맥락에서 읽은 파일은 다시 읽지 않는다. 링크가 없으면 설치 목록에서 같은 이름을 찾고, 그래도 없으면 누락을 알린다. 원칙을 이유로 합의한 범위를 확대하거나 제품 결정을 바꾸지 않는다.
+
+| 적용 상황 | 읽을 원칙 |
+| --- | --- |
+| 핵심 데이터·접근 패턴·동시 상태를 정할 때 | [foundational-thinking](../../principle-foundational-thinking/SKILL.md) |
+| 새 요구사항을 기존 설계에 통합할 때 | [redesign-from-first-principles](../../principle-redesign-from-first-principles/SKILL.md) |
+| 구조 변경의 크기와 제거할 복잡성을 판단할 때 | [laziness-protocol](../../principle-laziness-protocol/SKILL.md), [subtract-before-you-add](../../principle-subtract-before-you-add/SKILL.md) |
+| 인터페이스·계층·상태 소유권을 정할 때 | [minimize-reader-load](../../principle-minimize-reader-load/SKILL.md); 상태·분기가 얽히면 [model-the-domain](../../principle-model-the-domain/SKILL.md) |
+| 외부 입력·프레임워크 경계를 정할 때 | [boundary-discipline](../../principle-boundary-discipline/SKILL.md) |
+| 정적 타입·시그니처를 설계할 때 | [type-system-discipline](../../principle-type-system-discipline/SKILL.md); TypeScript면 [typescript-best-practices](../../typescript-best-practices/SKILL.md) |
+| 사용자·호출자 경험과 범위를 절충할 때 | [experience-first](../../principle-experience-first/SKILL.md) |
+| 선례 없는 구조·상호작용을 선택할 때 | [exhaust-the-design-space](../../principle-exhaust-the-design-space/SKILL.md) |
+| 동작 검증 방법을 설계하거나 실험 결과로 선택할 때 | [test-behavior-not-implementation](../../principle-test-behavior-not-implementation/SKILL.md), [prove-it-works](../../principle-prove-it-works/SKILL.md) |
+| 후보 분산 조사나 긴 자료를 다룰 때 | [guard-the-context-window](../../principle-guard-the-context-window/SKILL.md) |
+
 ## 호출 예제에서 구조를 도출한다
 
-실제 사용 예제를 먼저 쓴다. 호출자가 전달할 값, 받을 결과와 오류, 알아야 할 순서·수명 규칙을 보여 준다. 여기에서 핵심 데이터 형태와 접근 패턴, 허용되는 상태·전이, 소유자를 정한 뒤 타입, 함수 시그니처와 책임 배치를 도출한다.
+실제 사용 예제로 호출자가 전달할 값, 받을 결과와 오류, 알아야 할 순서·수명 규칙을 보여 준다. 이를 바탕으로 타입·시그니처와 책임을 정하고, 작은 인터페이스 뒤에 복잡한 처리를 모은다.
 
-- 함께 바뀌는 규칙과 지식은 같은 곳에서 관리하고, 작은 인터페이스 뒤에 복잡한 처리를 모은다. 같은 규칙이 조건문이나 함께 갱신해야 하는 값에 흩어지면 타입·상태 전이·테이블 등으로 표현할 수 있는지 검토한다. 명확한 단순 로직에 추상화를 강제하지 않는다.
-- 기존 계약과 타입을 재사용하고, 원본 스키마가 있으면 타입을 거기서 도출한다. 잘못된 상태 조합이나 의미가 다른 값의 혼동을 타입으로 막되, 실제 혼동 위험이 없는 값까지 별도 타입으로 감싸지 않는다.
-- 값의 출처와 변경 주체를 추적할 때 거치는 계층과 기억해야 할 상태를 줄인다. 새 계층·데이터 변환은 숨길 복잡성이나 격리할 변화가 있을 때 도입한다.
-- 각 상태의 소유자와 갱신 경로를 정한다. 원본과 파생 값을 구분하고 관련된 실패·취소·재시도·동시 요청의 결과를 설명한다.
-- 외부 입력을 검증해 내부 모델로 바꾸는 경계와 부수 효과의 위치를 정한다. 내부에서는 검증된 계약을 사용하되, 타입 선언만으로 원본 입력이 검증됐다고 가정하지 않는다. 교체나 테스트를 위한 접점은 필요한 만큼만 두고, 기존 테스트 수단을 우선한다.
-- 바뀌는 사용처와 공개 계약, 필요한 이전 방법을 확인한다. 대표 성공·실패를 인터페이스에서 관찰 가능한 결과로 검증할 방법을 제시한다.
-
-새 요구사항이 처음부터 있었다면 어떤 구조가 적합했을지 검토하고, 기존 구조 유지안과 비교한다. 전체 재작성을 전제하지 말고 합의한 목표에 필요한 변경을 선택한다. 관련 불필요한 코드나 중복 정책은 호출부·계약을 확인해 제거 순서를 제안하되, 무관한 정리를 포함하지 않는다. 중요한 선택에 유효한 대안이 있으면 추천 이유와 단점을 적고, 차이를 만들기 위한 계층이나 옵션은 추가하지 않는다.
+각 상태의 소유자와 갱신 경로, 관련 실패·취소·재시도·동시 요청의 결과를 설명한다. 바뀌는 사용처와 공개 계약, 필요한 이전 방법과 검증 방법을 제시한다. 중요한 선택의 대안과 단점을 비교하되, 전체 재작성이나 차이를 위한 대안을 전제하지 않는다.
 
 ## 반환할 내용
 
