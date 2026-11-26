@@ -1,0 +1,4 @@
+interface:
+  display_name: "Testing Guide"
+  short_description: "Apply the frontend testing guide to tests and reviews."
+  default_prompt: "Use $testing-guide to write or review frontend tests using the team testing standards."

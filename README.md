@@ -8,6 +8,7 @@
 | [design-code](skills/design-code/SKILL.md) | 독립적인 서브에이전트 설계를 메인이 비교·통합해 하나의 코드 설계안으로 정리합니다. |
 | [implement-code](skills/implement-code/SKILL.md) | 서브에이전트에게 구현을 위임하고 메인이 실제 변경과 실행 결과를 검토합니다. |
 | [qa-feature](skills/qa-feature/SKILL.md) | 독립 QA 에이전트가 변경 전 기준과 변경 후 기능·회귀를 검증하고 웹 화면은 ego lite로 확인합니다. |
+| [testing-guide](skills/testing-guide/SKILL.md) | 프런트엔드 테스트의 범위·구조·Mock·UI 검증 기준을 적용해 테스트를 작성하고 리뷰합니다. |
 | [review-code](skills/review-code/SKILL.md) | Interrogate, 구조·유지보수, Devil’s critic의 독립 리뷰를 메인이 검증하고 통합합니다. |
 | [dev-mode](skills/dev-mode/SKILL.md) | 명시적으로 호출하면 네 플레이북에 따라 Issue 등록부터 구현·리뷰·QA와 결과 PR 게시까지 진행합니다. |
 | [create-issue](skills/create-issue/SKILL.md) | 목표·요구사항·제약·완료 조건을 Issue로 등록하거나 갱신합니다. |
@@ -44,7 +45,7 @@
 
 [typescript-best-practices](skills/typescript-best-practices/SKILL.md)는 TypeScript 작업에서 사용하며, 타입·경계 원칙과 구체적인 코드 예제를 연결합니다.
 
-작업 스킬을 설치할 때 참조하는 원칙 스킬도 같은 스킬 루트에 함께 설치하세요. 이 저장소의 `skills/` 내부 구조를 그대로 로컬 스킬 루트에 복사하면 27개 스킬의 참조가 연결됩니다. `principles/`에는 상위 `SKILL.md`를 만들지 않고 17개 독립 스킬을 하위 폴더로 둡니다. 각 작업 스킬은 단독으로 호출할 수 있습니다. 원칙과 TypeScript 스킬은 pstack의 명시적 호출 설정을 Codex의 `allow_implicit_invocation: false`로 옮겼으며, 작업 스킬이 필요한 파일을 읽거나 사용자가 이름으로 직접 호출할 수 있습니다.
+작업 스킬을 설치할 때 참조하는 원칙 스킬도 같은 스킬 루트에 함께 설치하세요. 이 저장소의 `skills/` 내부 구조를 그대로 로컬 스킬 루트에 복사하면 28개 스킬의 참조가 연결됩니다. `principles/`에는 상위 `SKILL.md`를 만들지 않고 17개 독립 스킬을 하위 폴더로 둡니다. 각 작업 스킬은 단독으로 호출할 수 있습니다. 원칙과 TypeScript 스킬은 pstack의 명시적 호출 설정을 Codex의 `allow_implicit_invocation: false`로 옮겼으며, 작업 스킬이 필요한 파일을 읽거나 사용자가 이름으로 직접 호출할 수 있습니다.
 
 원칙과 TypeScript 스킬의 출처는 [pstack 원본](https://github.com/cursor/plugins/tree/41e400932eca14f289e7db717a70455256b6d388/pstack)입니다. 영문 본문을 유지하고 Codex 호출 설정과 참조 링크만 조정했습니다. 17개 원칙 스킬의 원본 커밋과 MIT 고지는 상위 [LICENSE](skills/principles/LICENSE)에서 함께 관리합니다. `reflect`의 고지는 [자체 LICENSE](skills/reflect/LICENSE)에 있습니다. 그 밖의 외부 원문을 사용한 스킬은 각 폴더의 `THIRD_PARTY_NOTICES.txt`를 유지합니다.
 
